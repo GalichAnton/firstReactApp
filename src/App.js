@@ -7,7 +7,10 @@ import NavBar from './components/NavBar/NavBar';
 import Profile from './components/Profile/Profile';
 
 
-function App() {
+
+
+
+function App(props) {
   return (
     <BrowserRouter>
       <div className='page'>
@@ -15,8 +18,14 @@ function App() {
         <NavBar />
 
         <div className='app-wrapper_content'>
-          <Route path= '/dialogs' component={Dialogs} />
-          <Route path= '/profile' component={Profile} />
+          <Route path='/dialogs' render={() =>
+            <Dialogs messages={props.state.messagesPage} 
+            store={props.store}/>} />
+
+          <Route path='/profile' render={() =>
+            <Profile profilePage={props.state.profilePage}
+            dispatch={props.dispatch}
+            />} />
         </div>
 
       </div>
