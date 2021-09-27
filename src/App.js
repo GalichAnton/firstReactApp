@@ -1,7 +1,7 @@
 import { Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Dialogs from './components/Dialogs/Dialogs';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 import Header from './components/Header/Header';
 import NavBar from './components/NavBar/NavBar';
 import Profile from './components/Profile/Profile';
@@ -10,7 +10,7 @@ import Profile from './components/Profile/Profile';
 
 
 
-function App(props) {
+function App() {
   return (
     <BrowserRouter>
       <div className='page'>
@@ -19,13 +19,10 @@ function App(props) {
 
         <div className='app-wrapper_content'>
           <Route path='/dialogs' render={() =>
-            <Dialogs messages={props.state.messagesPage} 
-            store={props.store}/>} />
+            <DialogsContainer/>} />
 
           <Route path='/profile' render={() =>
-            <Profile profilePage={props.state.profilePage}
-            dispatch={props.dispatch}
-            />} />
+            <Profile/>} />
         </div>
 
       </div>
