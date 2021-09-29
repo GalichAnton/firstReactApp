@@ -6,7 +6,8 @@ const NavBar = () => {
       <div><NavLink className={classes.navbar__link}  activeClassName={classes.active} to='/profile'>Profile</NavLink></div>
       <div><NavLink className={classes.navbar__link} activeClassName={classes.active} to='/dialogs'>Messages</NavLink></div>
       <div><NavLink className={classes.navbar__link} activeClassName={classes.active} to='/news'>News</NavLink></div>
-      <div><NavLink className={classes.navbar__link} activeClassName={classes.active} to='/nusic'>Music</NavLink></div>
+      <div><NavLink className={classes.navbar__link} activeClassName={classes.active} to='/music'>Music</NavLink></div>
+      <div><NavLink className={classes.navbar__link} activeClassName={classes.active} to='/users'>Users</NavLink></div>
       <div className={classes.app__menu_settings}><NavLink className={classes.navbar__link} activeClassName={classes.active} to='/setings'>Settings</NavLink></div>
     </nav>
   )

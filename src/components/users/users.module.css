@@ -1,0 +1,25 @@
+.userPhoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.userPage{
+  padding: 30px;
+}
+.userCard{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;align-items: flex-start;
+}
+.selectedPage{
+  font-size: 18px;
+  font-weight: bold;
+}
+.pagination{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
